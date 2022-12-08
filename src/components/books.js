@@ -3,12 +3,11 @@ import { PropTypes } from 'prop-types';
 
 const Book = ({ items }) => {
   const {
-    type, title, author, chapter,
+    title, author, chapter,
   } = items;
   return (
     <>
       <div>
-        <span>{type}</span>
         <h1>{title}</h1>
         <p>{author}</p>
 
@@ -31,7 +30,6 @@ const Book = ({ items }) => {
 };
 
 Book.propTypes = {
-  type: PropTypes.string,
   title: PropTypes.string,
   author: PropTypes.string,
   chapter: PropTypes.string,
