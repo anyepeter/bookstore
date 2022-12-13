@@ -12,7 +12,24 @@ export const removeBook = (id) => ({
 });
 
 const initialState = {
-  bookList: [],
+  bookList: [{
+    id: 1,
+    title: 'The Hunger Games',
+    author: 'Suzanana Collins',
+    chapter: 'Chapter 17',
+  },
+  {
+    id: 2,
+    title: 'Dune',
+    author: 'Will Smiths',
+    chapter: 'Chapter 3',
+  },
+  {
+    id: 3,
+    title: 'Capital in the Twenty-First Century',
+    author: 'Chirs Jenner',
+    chapter: 'Introduction',
+  }],
 };
 
 const bookListReducer = (state = initialState, action) => {
