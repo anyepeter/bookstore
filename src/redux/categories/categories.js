@@ -1,4 +1,4 @@
-const CHECK_STATUS = 'CHECK_STATUS';
+const CHECK_STATUS = 'bookstore/src/redux/categories/CHECK_STATUS';
 
 export const checkStatus = (id) => ({
   type: CHECK_STATUS,
