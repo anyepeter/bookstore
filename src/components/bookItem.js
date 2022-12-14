@@ -26,7 +26,6 @@ Bookitems.propTypes = {
       id: PropTypes.number,
       title: PropTypes.string,
       author: PropTypes.string,
-      chapter: PropTypes.string,
     }),
   ).isRequired,
 };

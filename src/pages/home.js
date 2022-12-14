@@ -4,12 +4,12 @@ import Bookitems from '../components/bookItem';
 import Addbook from '../components/addBooks';
 
 const BookPage = () => {
-const bookEl = useSelector((state) => state.Books.bookList);
-   return (
+  const bookEl = useSelector((state) => state.Books);
+  return (
     <main>
       <Bookitems books={bookEl} />
       <Addbook />
     </main>
-   );
- };
+  );
+};
 export default BookPage;
