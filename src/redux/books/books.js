@@ -1,5 +1,9 @@
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { getBooks, removeBookItem, addBooksItem } from '../api/api';
+
 const ADD_BOOK = 'bookstore/src/redux/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookstore/src/redux/books/REMOVE_BOOK';
+const GET_BOOK = 'bookstore/src/redux/books/GET_BOOK';
 
 const items = [{
   id: 1,
@@ -29,10 +33,12 @@ const bookListReducer = (state = items, action = {}) => {
   }
 };
 
-export const addBook = (payload) => ({
-  type: ADD_BOOK,
-  payload,
-});
+export const addBook = createAsyncThunk(ADD_BOOK, 
+  async (elem) => {
+    await addBooksItem(elem);
+    return elem;
+  }, 
+  );
 
 export const removeBook = (id) => ({
   type: REMOVE_BOOK,
