@@ -5,13 +5,14 @@ const ADD_BOOK = 'bookstore/src/redux/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookstore/src/redux/books/REMOVE_BOOK';
 const GET_BOOK = 'bookstore/src/redux/books/GET_BOOK';
 
- const fetchBooks = createAsyncThunk(
-  GET_BOOK,
-  async () => {
-    const elem = await getBooks();
-    return elem;
-  },
-);
+ const fetchBooks = createAsyncThunk(GET_BOOK, getBooks());
+
+ export const addBook = createAsyncThunk(ADD_BOOK, addBooksItem);
+
+export const removeBook = createAsyncThunk(REMOVE_BOOK, removeBookItem);
+
+
+
 const bookListReducer = (state = items, action = {}) => {
   switch (action.type) {
     case ADD_BOOK:
@@ -24,18 +25,6 @@ const bookListReducer = (state = items, action = {}) => {
       return state;
   }
 };
-
-export const addBook = createAsyncThunk(ADD_BOOK, 
-  async (elem) => {
-    await addBooksItem(elem);
-    return elem;
-  }, 
-  );
-
-export const removeBook = createAsyncThunk(REMOVE_BOOK, async (id) => {
-  await removeBookItem(id);
-  return elem;
-})
 
 
 

@@ -17,7 +17,7 @@ export const removeBookItem = async (id) => {
  return id;
 };
 
-const renderBooks = (response) => Object.entries(response.data).map((arr) => {
+const renderBooks = (res) => Object.entries(res.data).map((arr) => {
   const [id, [{ title, author, category }]] = arr;
   return {
     id, title, author, category,
