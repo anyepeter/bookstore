@@ -1,10 +1,12 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../redux/books/books';
 
 const Book = ({ items }) => {
-  const {
-    title, author, chapter,
-  } = items;
+  const dispatch = useDispatch();
+  const { id, title, author } = items;
+
   return (
     <>
       <div>
@@ -13,7 +15,17 @@ const Book = ({ items }) => {
 
         <ul>
           <li><button type="submit">Comments</button></li>
-          <li><button type="submit">Remove</button></li>
+          <li>
+            <button
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                dispatch(removeBook(id));
+              }}
+            >
+              Remove
+            </button>
+          </li>
           <li><button type="submit">Edit</button></li>
         </ul>
       </div>
@@ -22,7 +34,6 @@ const Book = ({ items }) => {
       </div>
       <div>
         <span>CURRENT CHAPTER</span>
-        <p>{chapter}</p>
         <button type="submit">UPDATE PROGRESS</button>
       </div>
     </>
@@ -32,7 +43,6 @@ const Book = ({ items }) => {
 Book.propTypes = {
   title: PropTypes.string,
   author: PropTypes.string,
-  chapter: PropTypes.string,
 }.isRequired;
 
 export default Book;

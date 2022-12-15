@@ -1,39 +1,33 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Book from './books';
 
-const Bookitems = () => {
-  const bookLists = [
-    {
-      id: 1,
-      title: 'The Hunger Games',
-      author: 'Suzanana Collins',
-      chapter: 'Chapter 17',
-    },
-    {
-      id: 2,
-      title: 'Dune',
-      author: 'Will Smiths',
-      chapter: 'Chapter 3',
-    },
-    {
-      id: 3,
-      title: 'Capital in the Twenty-First Century',
-      author: 'Chirs Jenner',
-      chapter: 'Introduction',
-    },
-  ];
+const Bookitems = (props) => {
+  const { books } = props;
   return (
     <div>
       <ul>
-        {bookLists.map((book) => (
-          <li key={book.id}>
-            <Book items={book} />
-          </li>
-        ))}
+        {
+          books.map((book) => (
+            <li key={book.id}>
+              <Book items={book} />
+            </li>
+          ))
+        }
 
       </ul>
     </div>
   );
+};
+
+Bookitems.propTypes = {
+  books: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.number,
+      title: PropTypes.string,
+      author: PropTypes.string,
+    }),
+  ).isRequired,
 };
 
 export default Bookitems;
