@@ -1,6 +1,6 @@
 const CHECK_STATUS = 'bookstore/src/redux/categories/CHECK_STATUS';
 
-const initialState = ['status'];
+const initialState = [];
 
 const categoryReducer = (state = initialState, action = {}) => {
   switch (action.type) {
