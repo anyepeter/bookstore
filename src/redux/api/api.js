@@ -4,7 +4,7 @@ export const getBooks = async () => {
 const getBookItems = await fetch(apiLink)
 .then((res) => res.json())
 return getBookItems
-}
+} 
 
 export const addBooksItem = async (elements) => {
 const postBooks = await fetch(apiLink, {
