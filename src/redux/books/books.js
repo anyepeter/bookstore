@@ -40,9 +40,9 @@ export const addBook = createAsyncThunk(ADD_BOOK,
   }, 
   );
 
-export const removeBook = (id) => ({
-  type: REMOVE_BOOK,
-  id,
-});
+export const removeBook = createAsyncThunk(REMOVE_BOOK, async (id) => {
+  await removeBooksItem(id);
+  return elem;
+})
 
 export default bookListReducer;
