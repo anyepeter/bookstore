@@ -1,25 +1,30 @@
+import axios from 'axios';
+
 const apiLink = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/X8JnkuOPMOkJQ3tlKNbU/books/';
 
-export const getBooks = async () => {
-const getBookItems = await fetch(apiLink)
-.then((res) => res.json())
-return getBookItems
-} 
 
 export const addBooksItem = async (elements) => {
-const postBooks = await fetch(apiLink, {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json; charset=UTF-8',
-  },
-  body: JSON.stringify(elements),
-}).then((response) => response.text());
-return postBooks;
-}
+  const {
+    id, title, author, category,
+  } = elements;
+  await axios.post(apiLink, {
+    item_id: id, title, author, category,
+  });
+  return elements;
+};
 export const removeBookItem = async (id) => {
-  const removeBook = await fetch(`apilink${id}`, {
-      method: 'DELETE',
-    }).then((response) => response.text());
-    return removeBook;
-  
-}
+ await axios.delete(`apiLink/${id}`);
+ return id;
+};
+
+const renderBooks = (response) => Object.entries(response.data).map((arr) => {
+  const [id, [{ title, author, category }]] = arr;
+  return {
+    id, title, author, category,
+  };
+});
+
+export const getBooks = async () => {
+ const getbookItems = await axios.get(apiLink)
+ return renderBooks(getbookItems)
+};
