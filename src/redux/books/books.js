@@ -5,21 +5,13 @@ const ADD_BOOK = 'bookstore/src/redux/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookstore/src/redux/books/REMOVE_BOOK';
 const GET_BOOK = 'bookstore/src/redux/books/GET_BOOK';
 
-const items = [{
-  id: 1,
-  title: 'The Hunger Games',
-  author: 'Suzanana Collins',
-},
-{
-  id: 2,
-  title: 'Dune',
-  author: 'Will Smiths',
-},
-{
-  id: 3,
-  title: 'Capital in the Twenty-First Century',
-  author: 'Chirs Jenner',
-}];
+ const fetchBooks = createAsyncThunk(
+  GET_BOOK,
+  async () => {
+    const elem = await getBooks();
+    return elem;
+  },
+);
 const bookListReducer = (state = items, action = {}) => {
   switch (action.type) {
     case ADD_BOOK:
@@ -41,8 +33,10 @@ export const addBook = createAsyncThunk(ADD_BOOK,
   );
 
 export const removeBook = createAsyncThunk(REMOVE_BOOK, async (id) => {
-  await removeBooksItem(id);
+  await removeBookItem(id);
   return elem;
 })
+
+
 
 export default bookListReducer;
