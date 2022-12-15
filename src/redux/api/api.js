@@ -6,3 +6,13 @@ const getBookItems = await fetch(apiLink)
 return getBookItems
 }
 
+const addBooksItem = async (elements) => {
+const postBooks = await fetch(apiLink, {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json; charset=UTF-8',
+  },
+  body: JSON.stringify(elements),
+}).then((response) => response.text());
+return postBooks;
+}
