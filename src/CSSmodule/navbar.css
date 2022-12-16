@@ -1,3 +1,45 @@
+header{
+   height: 60px;
+   width: inherit;
+   padding: 0 3rem;
+   background-color: #fff;
+}
+
 nav{
-  color: red;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.size{
+  font-size: 32px;
+  color: blue;
+}
+
+Link{
+font-size: 30px;
+}
+.menuList{
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.links{
+  font-size: 22px;
+padding: 10px;
+text-decoration: none;
+color: black;
+}
+
+.links:focus{
+  color: aliceblue;
+  transform: scale(1.2);
+}
+.logo{
+  font-size: 40px;
+  color: blue;
+  font-weight: 700;
 }

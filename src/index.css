@@ -27,7 +27,7 @@ body {
 
  .main {
   border: 1px solid black;
-  background-color: #fff;
+  background-color: rgb(209, 206, 206);
   box-shadow: 30px 25px 25px silver;
   border-radius: 5px;
  }

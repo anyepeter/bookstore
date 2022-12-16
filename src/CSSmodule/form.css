@@ -1,0 +1,32 @@
+.form-section{
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+  gap: 1rem;
+  padding: 2rem 3rem 2rem;
+}
+
+form{
+  display: flex;
+  width: inherit;
+  gap: 1rem;
+  justify-content: space-between;
+
+}
+
+input{
+  font-size: 18px;
+  padding: 5px;
+}
+
+.title{
+  width: 40%;
+}
+
+.button-sub{
+  width: 15rem;
+  font-size: 18px;
+  background-color: blue;
+  color: #fff;
+  border: none;
+}
