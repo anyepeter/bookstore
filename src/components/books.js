@@ -11,15 +11,14 @@ const Book = ({ items }) => {
   } = items;
 
   return (
-    <section className="bookSection">
-      <div className="userContainer">
-        <div className="detail">
-          <p className="category">{category}</p>
-          <h1 className="titles">{title}</h1>
-          <p className="author">{author}</p>
-        </div>
-        <ul className="btnSection">
-          <li><button type="submit">Comments</button></li>
+    <div className="book-card">
+      <div className="card-left">
+        <h4 className="book-category">{category}</h4>
+        <h1 className="book-title">{title}</h1>
+        <p className="book-author">{author}</p>
+        <ul className="actions align-items-center">
+          <li><button type="button" className="border-0 bg-transparent p-0">Comments</button></li>
+          <div className="seperator" />
           <li>
             <button
               type="button"
@@ -31,32 +30,25 @@ const Book = ({ items }) => {
               Remove
             </button>
           </li>
-          <li><button type="submit">Edit</button></li>
+          <div className="seperator" />
+          <li><button type="button">Edit</button></li>
         </ul>
       </div>
-      <div className="circleCon flex-row">
-        <div className="circle-wrap">
-          <div className="circle">
-            <div className="mask full">
-              <div className="fill" />
-            </div>
-            <div className="mask half">
-              <div className="fill" />
-            </div>
-            <div className="inside-circle" />
-          </div>
-        </div>
-        <div className="progress">
-          <p className="percentage">75%</p>
-          <p className="completed">Completed</p>
+      <div className="card-middle d-flex justify-content-center align-items-center">
+        <div className="progress-spinner" />
+        <div className="completed">
+          <p className="progress-percent">78%</p>
+          <p className="progress-text">Completed</p>
         </div>
       </div>
-      <div className="chapter">
-        <h5>CURRENT CHAPTER</h5>
-        <p className="chapterNumber">Chapter 17</p>
-        <button className="buttonEl" type="submit">UPDATE PROGRESS</button>
+      <div className="card-right d-flex flex-column align-items-center border-start">
+        <div>
+          <h4>CURRENT CHAPTER</h4>
+          <h2>Chapter 17</h2>
+          <button type="button" className="primary-btn">UPDATE PROGRESS</button>
+        </div>
       </div>
-    </section>
+    </div>
   );
 };
 

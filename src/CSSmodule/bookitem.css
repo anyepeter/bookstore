@@ -1,144 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Roboto+Slab:wght@300;400;700&display=swap');
+
+:root {
+  --clr-primary: #0290ff;
+  --clr-primary-dark: #4386bf;
+  --clr-secondary: #121212;
+  --clr-accent: #888;
+  --clr-border-light: #e8e8e8;
+  --fs-normal: 0.875rem;
+  --fs-mid: 1.375rem;
+  --fs-larg: 2rem;
+  --fw-normal: normal;
+  --fw-bold: bold;
+  --opacity-half: 0.5;
+}
+
 .bookList {
-  margin: 2rem 3rem;
   list-style: none;
+  padding-top: 2rem;
+}
+
+.book-card {
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  padding: 1em 2rem;
+  margin: 1.5rem 3rem;
+  background: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.book-category {
+  color: var(--clr-secondary);
+  font-size: var(--fs-normal);
+  font-weight: var(--fw-bold);
+  font-family: 'Montserrat', sans-serif;
+  opacity: var(--opacity-half);
+}
+
+.book-title {
+  color: var(--clr-secondary);
+  font-size: var(--fs-mid);
+  font-weight: var(--fw-bold);
+}
+
+.actions {
+  margin: 0;
+  margin-top: 1.313em;
+  gap: calc(0.983em / 2);
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.bookSection {
-  display: flex;
-  width: inherit;
-  justify-content: space-between;
-  padding: 10px;
-  background-color: #fff;
-}
-
-.userContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.detail {
-  display: flex;
-  flex-direction: column;
-}
-
-.titles {
-  font-size: 42px;
-}
-
-.category {
-  color: rgb(58, 58, 59);
-}
-
-.author {
-  color: #227ded;
-}
-
-.btnSection {
-  display: flex;
-  gap: 1rem;
-  justify-content: space-between;
   list-style: none;
-  margin-top: 0.7rem;
 }
 
-li > button {
-  padding: 5px;
+.actions button {
   border: none;
-  color: #227ded;
   background-color: #fff;
-  font-size: 20px;
 }
 
-.mask .fill {
-  clip: rect(0, 75px, 150px, 0);
-  background-color: #227ded;
+.actions button,
+.book-author {
+  color: var(--clr-primary-dark);
+  font-weight: 300;
 }
 
-.mask.full,
-.circle .fill {
-  animation: fill ease-in-out 3s;
-  transform: rotate(135deg);
-}
-
-.circle-wrap {
-  width: 150px;
-  height: 150px;
+.seperator {
   background: #e8e8e8;
-  border-radius: 50%;
-  border: 1px solid #cdcbd0;
+  width: 0.125rem;
+  height: 1.5rem;
 }
 
-.circle-wrap .circle .mask,
-.circle-wrap .circle .fill {
-  width: 150px;
-  height: 150px;
-  position: absolute;
-  border-radius: 50%;
-}
-
-.circle-wrap .circle .mask {
-  clip: rect(0, 150px, 150px, 75px);
-}
-
-.circle-wrap .inside-circle {
-  width: 122px;
-  height: 122px;
-  border-radius: 50%;
-  background: #fff;
-  line-height: 120px;
-  text-align: center;
-  margin-top: 14px;
-  margin-left: 14px;
-  color: #1e51dc;
-  position: absolute;
-  z-index: 100;
-  font-weight: 700;
-  font-size: 2em;
-}
-
-@keyframes fill {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(135deg);
-  }
-}
-
-.circleCon {
+.card-middle {
+  gap: calc(1.375rem / 2);
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 1rem;
 }
 
-.percentage {
-  font-size: 25px;
+.progress-spinner {
+  width: 4.25rem;
+  height: 4.25rem;
+  border: 5px solid var(--clr-primary);
+  border-top-color: var(--clr-border-light);
+  border-radius: 100%;
+  transform: rotate(-45deg);
 }
 
-.chapter {
-  display: flex;
-  flex-direction: column;
-  height: inherit;
-  justify-content: space-around;
-  margin-right: 5rem;
-  font-family: "Roboto Slab", 'Alternates', sans-serif;
+.progress-percent {
+  font-family: 'Montserrat', sans-serif;
+  font-size: var(--fs-larg);
+  margin: 0;
 }
 
-.chapter h5,
-.completed {
-  color: #cdcbd0;
+.progress-text {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--clr-secondary);
+  opacity: var(--opacity-half);
+  margin: 0;
 }
 
-.buttonEl {
-  padding: 10px;
-  background-color: #227ded;
-  color: #fff;
+/* Card book right side */
+.card-right h4 {
+  color: var(--clr-secondary);
+  font-size: var(--fs-normal);
+  font-weight: 300;
+  opacity: var(--opacity-half);
+  margin: 0;
+}
+
+.card-right h2 {
+  color: var(--clr-secondary);
+  font-size: 1rem;
+  font-weight: 300;
+  margin-top: 0.438rem;
+  margin-bottom: 1.438rem;
+}
+
+.primary-btn {
+  color: white;
   border: none;
-  font-size: 18px;
+  border-radius: 3px;
+  background-color: var(--clr-primary);
+  font-weight: 300;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
 }

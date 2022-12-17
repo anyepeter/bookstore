@@ -29,10 +29,16 @@ link {
 }
 
 .links {
-  font-size: 25px;
+  font-size: 20px;
   padding: 10px;
   text-decoration: none;
-  color: rgb(91, 170, 250);
+  text-transform: uppercase;
+  color: rgb(221, 235, 250);
+}
+
+.mainLink {
+  color: black;
+  font-weight: 700;
 }
 
 .links:focus {
@@ -42,10 +48,11 @@ link {
 
 .logo {
   font-size: 48px;
-  color: #227ded;
+  color: #0290ff;
   font-weight: 700;
+  text-transform: none;
 }
 
 .logo:focus {
-  color: #227ded;
+  color: #0290ff;
 }

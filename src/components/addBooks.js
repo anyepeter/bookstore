@@ -33,12 +33,12 @@ const Addbook = () => {
   };
 
   return (
-    <div className="form-section">
-      <h2 className="titleEl">ADD NEW BOOK</h2>
-      <form onSubmit={handleForm}>
+    <div className="genaral-contain">
+      <h2 className="heading">ADD NEW BOOK</h2>
+      <form onSubmit={handleForm} className="list-form">
         <input type="text" className="title" name="title" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Book Title Here" />
         <input type="text" name="author" value={author} onChange={(e) => setAuthor(e.target.value)} placeholder="Author Name Here" />
-        <input type="text" name="category" value={category} onChange={(e) => setCategory(e.target.value)} placeholder="Category Name Here" />
+        <input type="text" className="categoryEl" name="category" value={category} onChange={(e) => setCategory(e.target.value)} placeholder="Category Name Here" />
         <button className="button-sub" type="submit">Add Book</button>
       </form>
       <span id="error" />
