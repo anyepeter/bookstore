@@ -14,24 +14,22 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
- *{
-  padding: 0;
-  margin: 0;
- }
-
- body{
   padding: 4rem 6rem;
   background-color: rgb(233, 232, 232);
- }
+}
 
- .main {
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.main {
   background-color: rgb(223, 223, 223);
   box-shadow: 30px 25px 25px silver;
   border-radius: 5px;
- }
+}
 
- .categoryEL {
+.categoryEL {
   width: 70vw;
   max-width: 500px;
   height: max-content;
@@ -47,7 +45,7 @@ body {
   text-align: center;
 }
 
-.btnEL{
+.btnEL {
   padding: 10px;
   font-size: 25px;
   color: #fff;

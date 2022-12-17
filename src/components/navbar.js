@@ -11,7 +11,7 @@ const Navbar = () => (
         <li><Link className="links" to="/">Books</Link></li>
         <li><Link className="links" to="/category">Category</Link></li>
       </ul>
-      <div><VscAccount className="size"/></div>
+      <div><VscAccount className="size" /></div>
     </nav>
   </header>
 );

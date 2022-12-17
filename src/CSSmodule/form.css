@@ -1,4 +1,4 @@
-.form-section{
+.form-section {
   display: flex;
   flex-direction: column;
   width: inherit;
@@ -6,30 +6,30 @@
   padding: 2rem 3rem 2rem;
 }
 
-.titleEl{
+.titleEl {
   color: rgb(75, 74, 74);
 }
-form{
+
+form {
   display: flex;
   width: inherit;
   gap: 1rem;
   justify-content: space-between;
-
 }
 
-input{
+input {
   font-size: 18px;
   padding: 5px;
   border: none;
   border-radius: 3px;
 }
 
-.title{
+.title {
   width: 50%;
   font-size: 18px;
 }
 
-.button-sub{
+.button-sub {
   width: 15rem;
   font-size: 18px;
   background-color: #227ded;

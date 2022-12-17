@@ -1,25 +1,26 @@
-header{
-   height: 70px;
-   width: inherit;
-   padding: 0 3rem;
-   background-color: #fff;
+header {
+  height: 70px;
+  width: inherit;
+  padding: 0 3rem;
+  background-color: #fff;
 }
 
-nav{
+nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.size{
+.size {
   font-size: 32px;
-  color:  #227ded;
+  color: #227ded;
 }
 
-Link{
-font-size: 30px;
+link {
+  font-size: 30px;
 }
-.menuList{
+
+.menuList {
   display: flex;
   gap: 1rem;
   justify-content: space-between;
@@ -27,23 +28,24 @@ font-size: 30px;
   list-style: none;
 }
 
-.links{
+.links {
   font-size: 25px;
-padding: 10px;
-text-decoration: none;
-color: rgb(91, 170, 250);
+  padding: 10px;
+  text-decoration: none;
+  color: rgb(91, 170, 250);
 }
 
-.links:focus{
+.links:focus {
   color: rgb(7, 7, 7);
   transform: scale(1.2);
 }
-.logo{
+
+.logo {
   font-size: 48px;
-  color:#227ded;
+  color: #227ded;
   font-weight: 700;
 }
 
-.logo:focus{
-  color:  #227ded;
+.logo:focus {
+  color: #227ded;
 }
