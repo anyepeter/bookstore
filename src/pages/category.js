@@ -6,8 +6,8 @@ const Categories = () => {
   const categoryEl = useSelector((state) => state.Category);
   const dispatch = useDispatch();
   return (
-    <>
-      <button
+    <div className="categoryEL">
+      <button className="btnEL"
         type="button"
         onClick={() => {
           dispatch(checkStatus());
@@ -17,7 +17,7 @@ const Categories = () => {
 
       </button>
       <h2>{categoryEl}</h2>
-    </>
+    </div>
   );
 };
 export default Categories;

@@ -30,3 +30,28 @@ body {
   box-shadow: 30px 25px 25px silver;
   border-radius: 5px;
  }
+
+ .categoryEL {
+  width: 70vw;
+  max-width: 500px;
+  height: max-content;
+  max-height: 90vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0.05rem 0.05rem 5px rgb(108, 108, 108);
+  border-radius: 5px;
+  font-weight: 550;
+  padding: 1rem;
+  text-align: center;
+}
+
+.btnEL{
+  padding: 10px;
+  font-size: 25px;
+  color: #fff;
+  background-color: #227ded;
+  border: none;
+  border-radius: 3px;
+}
