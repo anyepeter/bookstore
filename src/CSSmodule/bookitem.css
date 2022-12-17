@@ -25,8 +25,8 @@
   flex-direction: column;
 }
 
-.title{
-  font-size: 35px;
+.titles{
+  font-size: 42px;
 }
 
 .category{
@@ -49,6 +49,7 @@ li > button {
   padding: 5px;
   border: none;
   color:  #227ded;
+  background-color: #fff;
 
 }
 

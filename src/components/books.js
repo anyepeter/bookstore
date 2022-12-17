@@ -15,7 +15,7 @@ const Book = ({ items }) => {
       <div className="userContainer">
         <div className="detail">
           <p className="category">{category}</p>
-          <h1 className="title">{title}</h1>
+          <h1 className="titles">{title}</h1>
           <p className="author">{author}</p>
         </div>
         <ul className="btnSection">

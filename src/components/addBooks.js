@@ -34,7 +34,7 @@ const Addbook = () => {
 
   return (
     <div className="form-section">
-      <h2>ADD NEW BOOK</h2>
+      <h2 className="titleEl">ADD NEW BOOK</h2>
       <form onSubmit={handleForm}>
         <input type="text" className="title" name="title" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Book Title Here" />
         <input type="text" className="author" name="author" value={author} onChange={(e) => setAuthor(e.target.value)} placeholder="Author Name Here" />

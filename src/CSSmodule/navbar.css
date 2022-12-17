@@ -1,5 +1,5 @@
 header{
-   height: 60px;
+   height: 70px;
    width: inherit;
    padding: 0 3rem;
    background-color: #fff;
@@ -28,7 +28,7 @@ font-size: 30px;
 }
 
 .links{
-  font-size: 22px;
+  font-size: 25px;
 padding: 10px;
 text-decoration: none;
 color: rgb(91, 170, 250);
@@ -39,7 +39,7 @@ color: rgb(91, 170, 250);
   transform: scale(1.2);
 }
 .logo{
-  font-size: 40px;
+  font-size: 48px;
   color:#227ded;
   font-weight: 700;
 }
