@@ -16,8 +16,8 @@ const Book = ({ items }) => {
         <h4 className="book-category">{category}</h4>
         <h1 className="book-title">{title}</h1>
         <p className="book-author">{author}</p>
-        <ul className="actions align-items-center">
-          <li><button type="button" className="border-0 bg-transparent p-0">Comments</button></li>
+        <ul className="actions">
+          <li><button type="button">Comments</button></li>
           <div className="seperator" />
           <li>
             <button
@@ -34,14 +34,14 @@ const Book = ({ items }) => {
           <li><button type="button">Edit</button></li>
         </ul>
       </div>
-      <div className="card-middle d-flex justify-content-center align-items-center">
+      <div className="card-middle">
         <div className="progress-spinner" />
         <div className="completed">
           <p className="progress-percent">78%</p>
           <p className="progress-text">Completed</p>
         </div>
       </div>
-      <div className="card-right d-flex flex-column align-items-center border-start">
+      <div className="card-right">
         <div>
           <h4>CURRENT CHAPTER</h4>
           <h2>Chapter 17</h2>
