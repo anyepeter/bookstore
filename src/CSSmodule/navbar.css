@@ -13,7 +13,7 @@ nav{
 
 .size{
   font-size: 32px;
-  color: blue;
+  color:  #227ded;
 }
 
 Link{
@@ -31,15 +31,19 @@ font-size: 30px;
   font-size: 22px;
 padding: 10px;
 text-decoration: none;
-color: black;
+color: rgb(91, 170, 250);
 }
 
 .links:focus{
-  color: aliceblue;
+  color: rgb(7, 7, 7);
   transform: scale(1.2);
 }
 .logo{
   font-size: 40px;
-  color: blue;
+  color:#227ded;
   font-weight: 700;
+}
+
+.logo:focus{
+  color:  #227ded;
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import { PropTypes } from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/books';
+import '../CSSmodule/bookitem.css';
 
 const Book = ({ items }) => {
   const dispatch = useDispatch();
@@ -10,13 +11,14 @@ const Book = ({ items }) => {
   } = items;
 
   return (
-    <>
-      <div>
-        <p>{category}</p>
-        <h1>{title}</h1>
-        <p>{author}</p>
-
-        <ul>
+    <section className="bookSection">
+      <div className="userContainer">
+        <div className="detail">
+          <p className="category">{category}</p>
+          <h1 className="title">{title}</h1>
+          <p className="author">{author}</p>
+        </div>
+        <ul className="btnSection">
           <li><button type="submit">Comments</button></li>
           <li>
             <button
@@ -32,14 +34,29 @@ const Book = ({ items }) => {
           <li><button type="submit">Edit</button></li>
         </ul>
       </div>
-      <div>
-        <span />
+      <div className="circleCon flex-row">
+        <div className="circle-wrap">
+      <div className="circle">
+        <div className="mask full">
+          <div className="fill" />
+        </div>
+        <div className="mask half">
+          <div className="fill" />
+        </div>
+        <div className="inside-circle" />
       </div>
-      <div>
-        <span>CURRENT CHAPTER</span>
-        <button type="submit">UPDATE PROGRESS</button>
+    </div>
+        <div className="progress">
+          <p className="percentage">75%</p>
+          <p className="completed">Completed</p>
+        </div>
       </div>
-    </>
+      <div className="chapter">
+        <h5>CURRENT CHAPTER</h5>
+        <p className="chapterNumber">Chapter 17</p>
+        <button className="buttonEl" type="submit">UPDATE PROGRESS</button>
+      </div>
+    </section>
   );
 };
 
