@@ -10,7 +10,7 @@ const Book = ({ items }) => {
   const {
     id, title, author, category,
   } = items;
-  const [percent] = useState(Math.random() * 100);
+  const [percent] = useState(Math.floor(Math.random() * 100));
   return (
     <div className="book-card">
       <div className="card-left">
@@ -35,21 +35,29 @@ const Book = ({ items }) => {
           <li><button type="button">Edit</button></li>
         </ul>
       </div>
-      <div style={{ width: 100, height: 100 }}>
-        <CircularProgressbar
-          value={percent}
-          styles={buildStyles({
-            rotation: 2,
-            strokeLinecap: 'butt',
-            textSize: '16px',
-            pathColor: '#0290ff',
-            textColor: '#f88',
-            trailColor: '#d6d6d6',
-            backgroundColor: '#3e98c7',
-          })}
-        />
+      <div className="progress">
+        <div style={{ width: 70, height: 70 }}>
+          <CircularProgressbar
+            value={percent}
+            styles={buildStyles({
+              rotation: 2,
+              strokeLinecap: 'butt',
+              textSize: '16px',
+              pathColor: '#0290ff',
+              textColor: '#f88',
+              trailColor: '#d6d6d6',
+              backgroundColor: '#3e98c7',
+            })}
+          />
+        </div>
+        <div>
+          <p className="textOne">
+            {`${percent}%`}
+          </p>
+          <p className="textTwo">Completed</p>
+        </div>
       </div>
-      <div>
+      <div className="card-right">
         <h4>CURRENT CHAPTER</h4>
         <h2>Chapter 17</h2>
         <button type="button" className="primary-btn">UPDATE PROGRESS</button>
