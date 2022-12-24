@@ -68,32 +68,19 @@
   height: 1.5rem;
 }
 
-.card-middle {
-  gap: calc(1.375rem / 2);
+.progress {
   display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
   align-items: center;
 }
 
-.progress-spinner {
-  width: 4.25rem;
-  height: 4.25rem;
-  border: 5px solid var(--clr-primary);
-  border-top-color: var(--clr-border-light);
-  border-radius: 100%;
-  transform: rotate(-45deg);
+.textOne {
+  font-size: 30px;
 }
 
-.progress-percent {
-  font-family: 'Montserrat', sans-serif;
-  font-size: var(--fs-larg);
-  margin: 0;
-}
-
-.progress-text {
-  font-family: 'Montserrat', sans-serif;
-  color: var(--clr-secondary);
-  opacity: var(--opacity-half);
-  margin: 0;
+.textTwo {
+  color: #888;
 }
 
 /* Card book right side */

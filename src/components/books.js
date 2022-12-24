@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { PropTypes } from 'prop-types';
 import { useDispatch } from 'react-redux';
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import { removeBook } from '../redux/books/books';
 import '../CSSmodule/bookitem.css';
 
@@ -9,7 +10,7 @@ const Book = ({ items }) => {
   const {
     id, title, author, category,
   } = items;
-
+  const [percent] = useState(Math.floor(Math.random() * 100));
   return (
     <div className="book-card">
       <div className="card-left">
@@ -34,19 +35,32 @@ const Book = ({ items }) => {
           <li><button type="button">Edit</button></li>
         </ul>
       </div>
-      <div className="card-middle">
-        <div className="progress-spinner" />
-        <div className="completed">
-          <p className="progress-percent">78%</p>
-          <p className="progress-text">Completed</p>
+      <div className="progress">
+        <div style={{ width: 70, height: 70 }}>
+          <CircularProgressbar
+            value={percent}
+            styles={buildStyles({
+              rotation: 2,
+              strokeLinecap: 'butt',
+              textSize: '16px',
+              pathColor: '#0290ff',
+              textColor: '#f88',
+              trailColor: '#d6d6d6',
+              backgroundColor: '#3e98c7',
+            })}
+          />
+        </div>
+        <div>
+          <p className="textOne">
+            {`${percent}%`}
+          </p>
+          <p className="textTwo">Completed</p>
         </div>
       </div>
       <div className="card-right">
-        <div>
-          <h4>CURRENT CHAPTER</h4>
-          <h2>Chapter 17</h2>
-          <button type="button" className="primary-btn">UPDATE PROGRESS</button>
-        </div>
+        <h4>CURRENT CHAPTER</h4>
+        <h2>Chapter 17</h2>
+        <button type="button" className="primary-btn">UPDATE PROGRESS</button>
       </div>
     </div>
   );
