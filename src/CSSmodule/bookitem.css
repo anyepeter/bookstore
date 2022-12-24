@@ -68,20 +68,21 @@
   height: 1.5rem;
 }
 
-.progress{
+.progress {
   display: flex;
   justify-content: flex-start;
   gap: 1rem;
   align-items: center;
 }
 
-.textOne{
+.textOne {
   font-size: 30px;
 }
 
-.textTwo{
+.textTwo {
   color: #888;
 }
+
 /* Card book right side */
 .card-right h4 {
   color: var(--clr-secondary);
